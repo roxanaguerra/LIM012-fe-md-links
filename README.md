@@ -1,5 +1,22 @@
 # Markdown Links
 
+Esta es una libreria para evaluar los archivos Markdown; normalmente contienen _links_ (vínculos/ligas) que muchas veces están rotos o ya no son válidos y eso perjudica mucho el valor de
+la información que se quiere compartir.
+
+Esta libreria te dara un reporte de estado y de validacion de los link que encuentre en el archivo Markdown.
+
+## Acerca de la Libreria
+
+Estos archivos se pueden descargar libremente o instalarlo; para qu elo puedan usar.
+
+## Diagrama de Flujo de la Libreria
+
+![](/img/mdLinks-CLI.png)
+
+## Diagrama de Flujo del CLI
+
+![](/img/mdLinks-Libreria.png)
+
 ## Preámbulo
 
 [Markdown](https://es.wikipedia.org/wiki/Markdown) es un lenguaje de marcado
