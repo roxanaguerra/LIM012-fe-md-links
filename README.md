@@ -11,11 +11,11 @@ Estos archivos se pueden descargar libremente o instalarlo; para qu elo puedan u
 
 ## Diagrama de Flujo de la Libreria
 
-![](/img/mdLinks-CLI.png)
+![](/img/mdLinks-Libreria.png)
 
 ## Diagrama de Flujo del CLI
 
-![](/img/mdLinks-Libreria.png)
+![](/img/mdLinks-CLI.png)
 
 ## Preámbulo
 

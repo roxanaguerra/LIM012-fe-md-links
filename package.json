@@ -1,10 +1,13 @@
 {
-  "name": "lim012-fe-md-links",
+  "name": "roxanaguerra-md-links",
   "version": "1.0.0",
-  "description": "Markdown Links",
-  "main": "index.js",
+  "description": "Es una libreria desarrollada en el entorno de Node js para validar los links de un archivo Markdown (*.md) ",
+  "main": "./lib/mdLinks.js",
   "scripts": {
     "test": "jest --verbose --coverage"
+  },
+  "bin": {
+    "md-links": "./lib/cli.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +32,7 @@
     "jest": "^25.4.0"
   },
   "dependencies": {
+    "chalk": "^4.0.0",
     "marked": "^1.0.0",
     "node-fetch": "^2.6.0"
   }
