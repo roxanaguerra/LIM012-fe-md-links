@@ -52,3 +52,37 @@ describe('Si es un Archivo', () => {
     });
 });
 
+describe('Extraer la extension de una ruta', () => {
+    it('is a function: ', () => {
+        expect(typeof mainFunction.fileExtension).toBe('function');
+    });
+    it('Retornar la extension: .md', () => {
+        expect(mainFunction.fileExtension('./test/prueba/readme.md')).toBe('.md');
+    });
+    it('Retornar la extension: .txt', () => {
+        expect(mainFunction.fileExtension('./test/prueba/archivo.txt')).toBe('.txt');
+    });
+    it('Retornar vacio', () => {
+        expect(mainFunction.fileExtension('./../LIM012-FE-MD-LINKS/test/prueba')).toBe('');
+    });
+});
+
+describe('Leer un archivo', () => {
+    it('is a function: ', () => {
+        expect(typeof mainFunction.readFile).toBe('function');
+    });
+    it('Leer el archivo.txt y mostrar su informacion: ', () => {
+        expect(mainFunction.readFile('./test/prueba/archivo.txt')).toBe('Hola mundo.');
+    });
+});
+
+const arrayReadDir = ['archivo.txt', 'prueba.md','prueba2', 'README.md'];
+describe('Leer un directorio', () => {
+    it('is a function: ', () => {
+        expect(typeof mainFunction.readDir).toBe('function');
+    });
+    it('Leer un directorio y mostrar los archivos: ', () => {
+        expect(mainFunction.readDir('./../LIM012-FE-MD-LINKS/test/prueba')).toEqual(arrayReadDir);
+    });
+});
+
