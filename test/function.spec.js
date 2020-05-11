@@ -28,7 +28,7 @@ describe('Funcion - Ruta absoluta', () => {
 });
 
 describe('Funcion - Obtener Ruta Absoluta', () => {
-    it('is a funcion: getPathAbsolute', () => {
+    it('is a function: getPathAbsolute', () => {
         expect(typeof mainFunction.getPathAbsolute).toBe('function');
     });
     it('Retornar una ruta Absoluta de una pathAbsolute', () => {
@@ -53,7 +53,7 @@ describe('Si es un Archivo', () => {
 });
 
 describe('Extraer la extension de una ruta', () => {
-    it('is a function: ', () => {
+    it('is a function: fileExtension', () => {
         expect(typeof mainFunction.fileExtension).toBe('function');
     });
     it('Retornar la extension: .md', () => {
@@ -62,27 +62,52 @@ describe('Extraer la extension de una ruta', () => {
     it('Retornar la extension: .txt', () => {
         expect(mainFunction.fileExtension('./test/prueba/archivo.txt')).toBe('.txt');
     });
-    it('Retornar vacio', () => {
+    it('Retornar vacio si es un directorio', () => {
         expect(mainFunction.fileExtension('./../LIM012-FE-MD-LINKS/test/prueba')).toBe('');
     });
 });
 
 describe('Leer un archivo', () => {
-    it('is a function: ', () => {
+    it('is a function: readFile', () => {
         expect(typeof mainFunction.readFile).toBe('function');
     });
-    it('Leer el archivo.txt y mostrar su informacion: ', () => {
+    it('Leer el archivo.txt y mostrar su informacion', () => {
         expect(mainFunction.readFile('./test/prueba/archivo.txt')).toBe('Hola mundo.');
     });
 });
 
-const arrayReadDir = ['archivo.txt', 'prueba.md','prueba2', 'README.md'];
+const arrayReadDir = ['archivo.txt', 'prueba.md', 'prueba2', 'README.md'];
 describe('Leer un directorio', () => {
-    it('is a function: ', () => {
+    it('is a function: readDir', () => {
         expect(typeof mainFunction.readDir).toBe('function');
     });
-    it('Leer un directorio y mostrar los archivos: ', () => {
+    it('Leer un directorio y mostrar los archivos', () => {
         expect(mainFunction.readDir('./../LIM012-FE-MD-LINKS/test/prueba')).toEqual(arrayReadDir);
     });
 });
 
+const arrayGetPathFileMD =
+    [
+        'C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\prueba.md',
+        'C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\prueba2\\README2.md',
+        'C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\README.md'
+    ];
+const arrayGetPathFileMD2 =
+    [
+        'C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\README.md',
+    ];
+describe('Obtener rutas de archivos .MD', () => {
+    it('is a function: getPathFileMD', () => {
+        expect(typeof mainFunction.getPathFileMD).toBe('function');
+    });
+    it('Rutas de archivos .md -> de un directorio', () => {
+        expect(mainFunction
+            .getPathFileMD('./../LIM012-FE-MD-LINKS/test/prueba'))
+            .toEqual(arrayGetPathFileMD);
+    });
+    it('Ruta de un archivo .MD -> de una ruta absoluta', () => {
+        expect(mainFunction
+            .getPathFileMD('./../LIM012-FE-MD-LINKS/test/prueba/README.md'))
+            .toEqual(arrayGetPathFileMD2);
+    });
+});
