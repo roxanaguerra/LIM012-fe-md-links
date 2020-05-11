@@ -111,3 +111,43 @@ describe('Obtener rutas de archivos .MD', () => {
             .toEqual(arrayGetPathFileMD2);
     });
 });
+
+const arrayLinks =
+    [
+        {
+            href: 'https://es.wikipedia.org/wiki/Markdown',
+            text: 'Markdown',
+            file: 'C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\prueba2\\README2.md'
+        },
+        {
+            href: 'https://docs.npmjs.com/getting-started/what-is-npm',
+            text: 'NPM',
+            file: 'C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\prueba2\\README2.md'
+        },
+        {
+            href: 'https://docs.npmjs.com/getting-started/publishing-npm-packages',
+            text: 'Publicar packpage',
+            file: 'C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\prueba2\\README2.md'
+        },
+        {
+            href: 'https://docs.npmjs.com/getting-started/publishing-npm-packages',
+            text: 'Crear módulos en Node.js',
+            file: 'C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\prueba2\\README2.md'
+        },
+        {
+            href: 'https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback',
+            text: 'Leer un archivo',
+            file: 'C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\prueba2\\README2.md'
+        }
+    ];
+
+describe('Extraer los links de un archivo .MD', () => {
+    it('is a function: ', () => {
+        expect(typeof mainFunction.extractLinks).toBe('function');
+    });
+    it('Links encontrados: ', () => {
+        expect(mainFunction
+            .extractLinks('./../LIM012-FE-MD-LINKS/test/prueba/prueba2'))
+            .toEqual(arrayLinks);
+    });
+});
