@@ -142,12 +142,18 @@ const arrayLinks =
     ];
 
 describe('Extraer los links de un archivo .MD', () => {
-    it('is a function: ', () => {
+    it('is a function: extractLinks', () => {
         expect(typeof mainFunction.extractLinks).toBe('function');
     });
     it('Links encontrados: ', () => {
         expect(mainFunction
             .extractLinks('./../LIM012-FE-MD-LINKS/test/prueba/prueba2'))
             .toEqual(arrayLinks);
+    });
+});
+
+describe('Validar los Link de un archivo .MD', () => {
+    it('is a function: isValidateLinks', () => {
+        expect(typeof mainFunction.isValidateLinks).toBe('function');
     });
 });
