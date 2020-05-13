@@ -152,8 +152,54 @@ describe('Extraer los links de un archivo .MD', () => {
     });
 });
 
+const arrayValidateLinks =
+    [
+        {
+            "file": "C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\readme.md",
+            "href": "https://es.wikipedia.org/wiki/Markdown", 
+            "status": 200, 
+            "statusText": "OK", 
+            "text": "Markdown"
+        }, 
+        { 
+            "file": "C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\readme.md", 
+            "href": "https://docs.npmjs.com/getting-started/what-is-npmmmmm", 
+            "status": 403, 
+            "statusText": "Fail", 
+            "text": "NPM" 
+        }, 
+        { 
+            "file": "C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\readme.md", 
+            "href": "https://docs.npmjs.com/getting-started/publishing-npm-packages", 
+            "status": 200, 
+            "statusText": "OK", 
+            "text": "Publicar packpage" 
+        }, 
+        { 
+            "file": "C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\readme.md", 
+            "href": "https://docs.npmjs.com/getting-started/publishing-npm-package999s", 
+            "status": 403, 
+            "statusText": "Fail", 
+            "text": "Crear módulos en Node.js" },
+        { 
+            "file": "C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\readme.md", 
+            "href": "https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback", 
+            "status": 200, 
+            "statusText": "OK", 
+            "text": "Leer un archivo" 
+        }
+    ];
 describe('Validar los Link de un archivo .MD', () => {
     it('is a function: isValidateLinks', () => {
         expect(typeof mainFunction.isValidateLinks).toBe('function');
+    });
+    it('Links encontrados - retornar un array:  file, href, status, statusMessage y text', 
+    (done) => {
+        mainFunction
+            .isValidateLinks('./../LIM012-FE-MD-LINKS/test/prueba/readme.md')
+            .then((resp) => {
+                expect(resp).toEqual(arrayValidateLinks);
+            done();
+            });
     });
 });
