@@ -1,7 +1,6 @@
 const mainFunction = require('../lib/function.js');
-// import {
-//     pathAbsolute,
-// } from '../lib/function.js';
+const data = require('./dataTest.js');
+
 
 describe('Si la ruta es Valida', () => {
     it('is a function: isValidPath', () => {
@@ -86,16 +85,7 @@ describe('Leer un directorio', () => {
     });
 });
 
-const arrayGetPathFileMD =
-    [
-        'C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\prueba.md',
-        'C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\prueba2\\README2.md',
-        'C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\README.md'
-    ];
-const arrayGetPathFileMD2 =
-    [
-        'C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\README.md',
-    ];
+
 describe('Obtener rutas de archivos .MD', () => {
     it('is a function: getPathFileMD', () => {
         expect(typeof mainFunction.getPathFileMD).toBe('function');
@@ -103,43 +93,16 @@ describe('Obtener rutas de archivos .MD', () => {
     it('Rutas de archivos .md -> de un directorio', () => {
         expect(mainFunction
             .getPathFileMD('./../LIM012-FE-MD-LINKS/test/prueba'))
-            .toEqual(arrayGetPathFileMD);
+            .toEqual(data.arrayGetPathFileMD);
     });
     it('Ruta de un archivo .MD -> de una ruta absoluta', () => {
         expect(mainFunction
             .getPathFileMD('./../LIM012-FE-MD-LINKS/test/prueba/README.md'))
-            .toEqual(arrayGetPathFileMD2);
+            .toEqual(data.arrayGetPathFileMD2);
     });
 });
 
-const arrayLinks =
-    [
-        {
-            href: 'https://es.wikipedia.org/wiki/Markdown',
-            text: 'Markdown',
-            file: 'C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\prueba2\\README2.md'
-        },
-        {
-            href: 'https://docs.npmjs.com/getting-started/what-is-npm',
-            text: 'NPM',
-            file: 'C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\prueba2\\README2.md'
-        },
-        {
-            href: 'https://docs.npmjs.com/getting-started/publishing-npm-packages',
-            text: 'Publicar packpage',
-            file: 'C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\prueba2\\README2.md'
-        },
-        {
-            href: 'https://docs.npmjs.com/getting-started/publishing-npm-packages',
-            text: 'Crear módulos en Node.js',
-            file: 'C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\prueba2\\README2.md'
-        },
-        {
-            href: 'https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback',
-            text: 'Leer un archivo',
-            file: 'C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\prueba2\\README2.md'
-        }
-    ];
+
 
 describe('Extraer los links de un archivo .MD', () => {
     it('is a function: extractLinks', () => {
@@ -148,47 +111,11 @@ describe('Extraer los links de un archivo .MD', () => {
     it('Links encontrados: ', () => {
         expect(mainFunction
             .extractLinks('./../LIM012-FE-MD-LINKS/test/prueba/prueba2'))
-            .toEqual(arrayLinks);
+            .toEqual(data.arrayLinks);
     });
 });
 
-const arrayValidateLinks =
-    [
-        {
-            "file": "C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\readme.md",
-            "href": "https://es.wikipedia.org/wiki/Markdown", 
-            "status": 200, 
-            "statusText": "OK", 
-            "text": "Markdown"
-        }, 
-        { 
-            "file": "C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\readme.md", 
-            "href": "https://docs.npmjs.com/getting-started/what-is-npmmmmm", 
-            "status": 403, 
-            "statusText": "Fail", 
-            "text": "NPM" 
-        }, 
-        { 
-            "file": "C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\readme.md", 
-            "href": "https://docs.npmjs.com/getting-started/publishing-npm-packages", 
-            "status": 200, 
-            "statusText": "OK", 
-            "text": "Publicar packpage" 
-        }, 
-        { 
-            "file": "C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\readme.md", 
-            "href": "https://docs.npmjs.com/getting-started/publishing-npm-package999s", 
-            "status": 403, 
-            "statusText": "Fail", 
-            "text": "Crear módulos en Node.js" },
-        { 
-            "file": "C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\readme.md", 
-            "href": "https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback", 
-            "status": 200, 
-            "statusText": "OK", 
-            "text": "Leer un archivo" 
-        }
-    ];
+
 describe('Validar los Link de un archivo .MD', () => {
     it('is a function: isValidateLinks', () => {
         expect(typeof mainFunction.isValidateLinks).toBe('function');
@@ -198,7 +125,7 @@ describe('Validar los Link de un archivo .MD', () => {
         mainFunction
             .isValidateLinks('./../LIM012-FE-MD-LINKS/test/prueba/readme.md')
             .then((resp) => {
-                expect(resp).toEqual(arrayValidateLinks);
+                expect(resp).toEqual(data.arrayValidateLinks);
             done();
             });
     });
