@@ -86,26 +86,26 @@ Así como el status de la respuesta recibida a la petición HTTP a dicha URL.
 
 Por ejemplo:
 
-![](/img/cli-validate.png)
+![](/img/cli-validate.PNG)
 
 ##### `--stats`
 
 Si pasamos la opción `--stats` el output (salida) será un texto con estadísticas
 básicas sobre los links.
 
-![](/img/cli-stast.png)
+![](/img/cli-stast.PNG)
 
 ##### `--stats --validate`
 
 Para obtener estadísticas que necesiten de los resultados de la validación.
 
-![](/img/cli-stast-validate.png)
+![](/img/cli-stast-validate.PNG)
 
 ##### `--help`
 
 Con esta opción se te mostrara las diferentes maneras que puedes usar por consola.
 
-![](/img/cli-help.png)
+![](/img/cli-help.PNG)
 
 ***
 
