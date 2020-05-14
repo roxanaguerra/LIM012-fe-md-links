@@ -69,13 +69,13 @@ Al colocar md-links en el terminal, te mostrara un mensaje de bienvenida, y un a
 
 Por ejemplo:
 
-![](/img/cli-md-links.png)
+![](/img/cli-md-links.PNG)
 
 ##### `md-links <path-to-file`
 
 Por ejemplo:
 
-![](/img/cli-path.png)
+![](/img/cli-path.PNG)
 
 #### Options
 
