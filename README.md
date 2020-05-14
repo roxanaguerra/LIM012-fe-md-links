@@ -61,55 +61,61 @@ mdLinks("./some/dir")
 
 Se ejecuta de la siguiente manera, a través de la terminal:
 
-`md-links <path-to-file> [options]`
+  #### `md-links <path-to-file> [options]`
+
+##### `md-links`
+
+Al colocar md-links en el terminal, te mostrara un mensaje de bienvenida, y un argumento de ayuda.
 
 Por ejemplo:
 
-```sh
-$ md-links ./some/example.md
-./some/example.md http://algo.com/2/3/ Link a algo
-./some/example.md https://otra-cosa.net/algun-doc.html algún doc
-./some/example.md http://google.com/ Google
-```
+![](/img/cli-md-links.png)
+
+##### `md-links <path-to-file`
+
+Por ejemplo:
+
+![](/img/cli-path.png)
 
 #### Options
 
 ##### `--validate`
 
+Si pasamos la opción --validate, el módulo hace una petición HTTP para averiguar si el link funciona o no. Si el link resulta en una redirección a una URL que responde ok, entonces consideraremos el link como 'Ok', sino lo consideramos con 'Fail'.
+Así como el status de la respuesta recibida a la petición HTTP a dicha URL.
+
 Por ejemplo:
 
-```sh13d99df067c1
-$ md-13d99df067c1
-./some/example.md http://algo.com/2/3/ ok 200 Link a algo
-./some/example.md https://otra-cosa.net/algun-doc.html fail 404 algún doc
-./some/example.md http://google.com/ ok 301 Google
-```
+![](/img/cli-validate.png)
 
 ##### `--stats`
 
 Si pasamos la opción `--stats` el output (salida) será un texto con estadísticas
 básicas sobre los links.
 
-```sh
-$ md-links ./some/example.md --stats
-Total: 3
-Unique: 3
-```
+![](/img/cli-stast.png)
 
-También podemos combinar `--stats` y `--validate` para obtener estadísticas que
-necesiten de los resultados de la validación.
+##### `--stats --validate`
 
-```sh
-$ md-links ./some/example.md --stats --validate
-Total: 3
-Unique: 3
-Broken: 1
-```
+Para obtener estadísticas que necesiten de los resultados de la validación.
+
+![](/img/cli-stast-validate.png)
+
+##### `--help`
+
+Con esta opción se te mostrara las diferentes maneras que puedes usar por consola.
+
+![](/img/cli-help.png)
+
+***
+
 ## Diagrama de Flujo de la Libreria
+
+### Diagrama de Flujo de la API
 
 ![](/img/mdLinks-Libreria.png)
 
-## Diagrama de Flujo del CLI
+### Diagrama de Flujo del CLI
 
 ![](/img/mdLinks-CLI.png)
 
@@ -121,34 +127,34 @@ Recuerda colocar en esta seccion los objetivos de aprendizaje que quedaron
 pendientes de tu proyecto anterior.
 
 ### Javascript
-- [ ] Uso de callbacks
-- [ ] Consumo de Promesas
-- [ ] Creacion de Promesas
-- [ ] Modulos de Js
-- [ ] Recursión
+- [x] Uso de callbacks
+- [x] Consumo de Promesas
+- [x] Creacion de Promesas
+- [x] Modulos de Js
+- [x] Recursión
 
 ### Node
-- [ ] Sistema de archivos
-- [ ] package.json
-- [ ] crear modules
-- [ ] Instalar y usar modules
+- [x] Sistema de archivos
+- [x] package.json
+- [x] crear modules
+- [x] Instalar y usar modules
 - [ ] npm scripts
-- [ ] CLI (Command Line Interface - Interfaz de Línea de Comando)
+- [x] CLI (Command Line Interface - Interfaz de Línea de Comando)
 
 ### Testing
-- [ ] Testeo de tus funciones
+- [x] Testeo de tus funciones
 - [ ] Testeo asíncrono
 - [ ] Uso de librerias de Mock
 - [ ] Mocks manuales
 - [ ] Testeo para multiples Sistemas Operativos
 
 ### Git y Github
-- [ ] Organización en Github
+- [x] Organización en Github
 
 ### Buenas prácticas de desarrollo
-- [ ] Modularización
-- [ ] Nomenclatura / Semántica
-- [ ] Linting
+- [x] Modularización
+- [x] Nomenclatura / Semántica
+- [x] Linting
 
 ***
 
