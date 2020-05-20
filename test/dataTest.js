@@ -77,6 +77,44 @@ const arrayValidateLinks =
         }
     ];
 
+const arrayCliOptions = [
+    {
+        href: 'https://es.wikipedia.org/wiki/Markdown',
+        text: 'Markdown',
+        file: 'C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\README.md',
+        status: 200,
+        statusText: 'OK'
+    },
+    {
+        href: 'https://docs.npmjs.com/getting-started/what-is-npmmmmm',
+        text: 'NPM',
+        file: 'C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\README.md',
+        status: 403,
+        statusText: 'Fail'
+    },
+    {
+        href: 'https://docs.npmjs.com/getting-started/publishing-npm-packages',
+        text: 'Publicar packpage',
+        file: 'C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\README.md',
+        status: 200,
+        statusText: 'OK'
+    },
+    {
+        href: 'https://docs.npmjs.com/getting-started/publishing-npm-package999s',
+        text: 'Crear módulos en Node.js',
+        file: 'C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\README.md',
+        status: 403,
+        statusText: 'Fail'
+    },
+    {
+        href: 'https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback',
+        text: 'Leer un archivo',
+        file: 'C:\\Users\\GUERRAROXANA\\Documents\\LIM012-FE-MD-LINKS\\test\\prueba\\README.md',
+        status: 200,
+        statusText: 'OK'
+    }
+];
+
 module.exports = {
     arrayGetPathFileMD,
     arrayGetPathFileMD2,
