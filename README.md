@@ -56,6 +56,14 @@ mdLinks("./some/dir")
   })
   .catch(console.error);
 ```
+Probando la librería en otras carpetas:
+- Requerimos la librería, llamamos a la varible y le damos dos argumentos (path, validate:true); luego mostramos en consola y nos retorna un array con 5 propiedades.
+
+![](/img/md-links-true.PNG)
+
+- Requerimos la librería, llamamos a la varible y le damos dos argumentos (path, validate:false); luego mostramos en consola y nos retorna un array con 3 propiedades.
+
+![](/img/md-links-false.PNG)
 
 ### CLI (Command Line Interface - Interfaz de Línea de Comando)
 
@@ -127,7 +135,7 @@ Recuerda colocar en esta seccion los objetivos de aprendizaje que quedaron
 pendientes de tu proyecto anterior.
 
 ### Javascript
-- [x] Uso de callbacks
+- [ ] Uso de callbacks
 - [x] Consumo de Promesas
 - [x] Creacion de Promesas
 - [x] Modulos de Js
@@ -154,7 +162,7 @@ pendientes de tu proyecto anterior.
 ### Buenas prácticas de desarrollo
 - [x] Modularización
 - [x] Nomenclatura / Semántica
-- [x] Linting
+- [ ] Linting
 
 ***
 
