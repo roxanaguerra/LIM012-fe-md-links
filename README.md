@@ -1,28 +1,38 @@
-# LIBRERÍA md-links
+# LIBRERÍA MD-LINKS
 
-Esta es una **librería** para evaluar los archivos Markdown; que normalmente contiene _links_ (vínculos/ligas) que muchas veces están rotos o ya no son válidos y eso perjudica mucho el valor de la información que se quiere compartir.
+## Índice
 
-Esta libreria te dara un reporte de estado y de validacion de los link que encuentre en el archivo Markdown.
+* [1. Definición del proyecto](#1-definición-del-proyecto)
+* [2. Instalación de la librería](#2-instalación-de-la-librería)
+* [3. Guía de uso](#4-guía-de-uso)
+* [4. Diagrama de Flujo de la Librería](#4-diagrama-de-flujo-de-la-librería)
+* [5. Vista de la Interfaz](#5-vista-de-la-interfaz)
+
+## 1. Definición del proyecto
+
+Esta es una **librería** con NodeJ, que lee y analiza archivos en formato Markdown; que normalmente contiene _links_ (vínculos/ligas) que muchas veces están rotos o ya no son válidos y eso perjudica mucho el valor de la información que se quiere compartir.
+
+> Esta librería te dará un reporte de estado y de validación de los link que encuentre en el archivo Markdown.
 
 ![](/img/roxanaguerra-md-links.png)
 
-## Instalación
+## 2. Instalación de la librería
 
 * Global:
 
-```sh
+```
   npm install --global roxanaguerra/LIM012-fe-md-links
 ```
 
 * Local:
 
-```sh
+```
   npm install roxanaguerra/LIM012-fe-md-links
 ```
 
-## Guía de Uso
+## 3. Guía de uso
 
-### JavaScript API
+### 3.1. JavaScript API
 
 #### `mdLinks(path, options)`
 
@@ -65,11 +75,13 @@ Probando la librería en otras carpetas:
 
 ![](/img/md-links-false.PNG)
 
-### CLI (Command Line Interface - Interfaz de Línea de Comando)
+### 3.2. CLI (Command Line Interface - Interfaz de Línea de Comando)
 
 Se ejecuta de la siguiente manera, a través de la terminal:
 
-  #### `md-links <path-to-file> [options]`
+>`md-links <path-to-file> [options]`
+
+---
 
 ##### `md-links`
 
@@ -79,17 +91,21 @@ Por ejemplo:
 
 ![](/img/cli-md-links.PNG)
 
+---
+
 ##### `md-links <path-to-file`
 
 Por ejemplo:
 
 ![](/img/cli-path.PNG)
 
+---
+
 #### Options
 
 ##### `--validate`
 
-Si pasamos la opción --validate, el módulo hace una petición HTTP para averiguar si el link funciona o no. Si el link resulta en una redirección a una URL que responde ok, entonces consideraremos el link como 'Ok', sino lo consideramos con 'Fail'.
+Si pasamos la opción --validate, el módulo hace una petición HTTP para averiguar si el link funciona o no. Si el link resulta en una re-dirección a una URL que responde ok, entonces consideraremos el link como 'Ok', sino lo consideramos con 'Fail'.
 Así como el status de la respuesta recibida a la petición HTTP a dicha URL.
 
 Por ejemplo:
@@ -117,22 +133,27 @@ Con esta opción se te mostrara las diferentes maneras que puedes usar por conso
 
 ***
 
-## Diagrama de Flujo de la Libreria
+## 4. Diagrama de Flujo de la Librería
 
-### Diagrama de Flujo de la API
+### 4.1. Diagrama de Flujo de la API
 
 ![](/img/mdLinks-Libreria.png)
 
-### Diagrama de Flujo del CLI
+### 4.2. Diagrama de Flujo del CLI
 
 ![](/img/mdLinks-CLI.png)
+
+## 5. Vista de la Interfaz
+![vista](/src/screen/md-links.gif)
+
+### Agradecimientos 
+Agradezco a Laboratoria y a mis coach que me apoyaron y orientaron para poder completar este proyecto.
 
 ***
 
 ## Objetivos de aprendizaje
 
-Recuerda colocar en esta seccion los objetivos de aprendizaje que quedaron 
-pendientes de tu proyecto anterior.
+Recuerda colocar en esta sección los objetivos de aprendizaje que quedaron pendientes de tu proyecto anterior.
 
 ### Javascript
 - [ ] Uso de callbacks
@@ -196,3 +217,4 @@ pendientes de tu proyecto anterior.
 - [Comprendiendo Promesas en Js](https://hackernoon.com/understanding-promises-in-javascript-13d99df067c1)
 - [Pill de recursión - video](https://www.youtube.com/watch?v=lPPgY3HLlhQ&t=916s)
 - [Pill de recursión - repositorio](https://github.com/merunga/pildora-recursion)
+
