@@ -4,7 +4,7 @@
 
 * [1. Definición del proyecto](#1-definición-del-proyecto)
 * [2. Instalación de la librería](#2-instalación-de-la-librería)
-* [3. Guía de uso](#4-guía-de-uso)
+* [3. Guía de uso](#3-guía-de-uso)
 * [4. Diagrama de Flujo de la Librería](#4-diagrama-de-flujo-de-la-librería)
 * [5. Vista de la Interfaz](#5-vista-de-la-interfaz)
 
@@ -131,8 +131,6 @@ Con esta opción se te mostrara las diferentes maneras que puedes usar por conso
 
 ![](/img/cli-help.PNG)
 
-***
-
 ## 4. Diagrama de Flujo de la Librería
 
 ### 4.1. Diagrama de Flujo de la API
@@ -144,7 +142,7 @@ Con esta opción se te mostrara las diferentes maneras que puedes usar por conso
 ![](/img/mdLinks-CLI.png)
 
 ## 5. Vista de la Interfaz
-![vista](/src/screen/md-links.gif)
+![vista](/img/md-links.gif)
 
 ### Agradecimientos 
 Agradezco a Laboratoria y a mis coach que me apoyaron y orientaron para poder completar este proyecto.
